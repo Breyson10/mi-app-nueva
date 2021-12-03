@@ -1,1 +1,1 @@
-<app-libro *ngFor="let libro of libros" [tituloLibros]="libro"></app-libro>
+<app-libro (libroClicKed)="eliminarLibro(libro)" *ngFor="let libro of libros" [tituloLibros]="libro"></app-libro>

@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
 })
 export class LibrosComponent {
   libros = ['Matematica', 'Algoritmos Basicos', 'Algebra Nivel Basico'];
+  eliminarLibro(libro: any){
+    this.libros = this.libros.filter(p=>p !== libro);
+  }
+
 }
