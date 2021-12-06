@@ -8,9 +8,10 @@ import {Component,Input,EventEmitter, Output} from "@angular/core";
 
 
 export class LibroComponent {
-  @Input() tituloLibros?:string
+  @Input() tituloLibros!:string
   @Output() libroClicKed = new EventEmitter();
-  onClicked(){
-    this.libroClicKed.emit();
+  onClicked(libro:any){
+    this.libroClicKed.emit(libro);
+    console.log(libro)
   }
 }
